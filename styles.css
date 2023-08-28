@@ -2,7 +2,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e0e3eb;
+}
+
+html {
+    background-image: url("/background.jpg");
+    background-size: cover;
 }
 
 .container{
