@@ -1,6 +1,7 @@
-let equal_pressed = 0;
-
-let button_input = document.querySelectorAll(".input-button");
+const dislpay = document.querySelector(".display");
+const buttons = document.querySelector("button");
+const specialCharacters = ["%", "*", "/", "-", "+", "="];
+let output = "";
 
 let input = document.getElementById("input");
 let equal = document.getElementById("equal");
