@@ -11,11 +11,9 @@ const calculate = (btnValue) => {
     } else if (btnValue === "DEL"){
         output = output.toString().slice(0, -1);
     } else {
+        if (output === "" && specialChars.includes(btnValue)) return;
+        output += btnValue;
     }
     display.value = output;
 };
 
-let input = document.getElementById("input");
-let equal = document.getElementById("equal");
-let clear = document.getElementById("clear");
-let erase = document.getElementById("erase");
