@@ -2,14 +2,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-html {
     background-image: url("/background.jpg");
     background-size: cover;
 }
 
-.container{
+.calculator{
     margin-top: 150px;
     position: relative;
     max-width: 300px;
@@ -20,7 +17,7 @@ html {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.display{
+#display{
     height: 80px;
     width: 100%;
     margin-bottom: 10px;
@@ -50,8 +47,9 @@ html {
     transform: scale(0.99);
 }
 
-.operator{
+.operator, .clear, .equals{
     color: #2f9fff;
 }
+
 
 
