@@ -1,8 +1,8 @@
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: url("/background.jpg");
+    justify-content: center;  
+     background-image: url("/background.jpg");
     background-size: cover;
 }
 
@@ -13,7 +13,7 @@ body{
     width: 100%;
     border-radius: 12px;
     padding: 10px 20px 20px;
-    color: #fff;
+    background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -40,7 +40,7 @@ body{
     border: none;
     font-size: 20px;
     cursor: pointer;
-    background-color: #fff;
+    
 }
 
 .buttons button:active{
