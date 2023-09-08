@@ -1,7 +1,7 @@
-const display = document.querySelector(".display");
-const buttons = document.querySelector("button");
-const specialCharacters = ["%", "*", "/", "-", "+", "="];
-let output = "";
+let currentInput = "";
+let currentOperator = "";
+let firstOperand = "";
+let awaitingNextNumber = false;
 
 const calculate = (btnValue) => {
     if (btnValue === "=" && btnValue !== "") {
@@ -17,3 +17,22 @@ const calculate = (btnValue) => {
     display.value = output;
 };
 
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  if (b !== 0) {
+    return a / b;
+  } else {
+    return "Cannot divide by zero";
+  }
+}
