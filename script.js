@@ -17,6 +17,10 @@ const calculate = (btnValue) => {
     display.value = output;
 };
 
+function updateDisplay() {
+  document.getElementById("display").value = currentInput;
+}
+
 function add(a, b) {
   return a + b;
 }
