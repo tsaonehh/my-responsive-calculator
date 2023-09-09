@@ -3,7 +3,7 @@ let currentOperator = "";
 let firstOperand = "";
 let awaitingNextNumber = false;
 
-const calculate = (btnValue) => {
+function calculate () {
     if (btnValue === "=" && btnValue !== "") {
         output = eval(output.replace("%", "/100"));
     } else if (btnValue === "AC"){
@@ -16,6 +16,14 @@ const calculate = (btnValue) => {
     }
     display.value = output;
 };
+
+function clearDisplay() {
+  currentInput = "";
+  currentOperator = "";
+  firstOperand = "";
+  awaitingNextNumber = false;
+  updateDisplay();
+}
 
 function updateDisplay() {
   document.getElementById("display").value = currentInput;
