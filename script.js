@@ -3,6 +3,25 @@ let currentOperator = "";
 let firstOperand = "";
 let awaitingNextNumber = false;
 
+function appendNumber(number) {
+  if (awaitingNextNumber) {
+    currentInput = number;
+    awaitingNextNumber = false;
+  } else {
+    currentInput += number;
+  }
+  updateDisplay();
+}
+
+function appendOperator(operator) {
+  if (currentOperator !== "") {
+    calculate();
+  }
+  currentOperator = operator;
+  firstOperand = currentInput;
+  awaitingNextNumber = true;
+}
+
 function calculate () {
     if (btnValue === "=" && btnValue !== "") {
         output = eval(output.replace("%", "/100"));
