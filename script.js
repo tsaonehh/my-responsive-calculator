@@ -22,19 +22,28 @@ function appendOperator(operator) {
   awaitingNextNumber = true;
 }
 
-function calculate () {
-    if (btnValue === "=" && btnValue !== "") {
-        output = eval(output.replace("%", "/100"));
-    } else if (btnValue === "AC"){
-        output = "";
-    } else if (btnValue === "DEL"){
-        output = output.toString().slice(0, -1);
-    } else {
-        if (output === "" && specialChars.includes(btnValue)) return;
-        output += btnValue;
-    }
-    display.value = output;
-};
+function calculate() {
+  const secondOperand = currentInput;
+  if (currentOperator === "+") {
+    currentInput = add(parseFloat(firstOperand), parseFloat(secondOperand));
+  } else if (currentOperator === "-") {
+    currentInput = subtract(
+      parseFloat(firstOperand),
+      parseFloat(secondOperand)
+    );
+  } else if (currentOperator === "*") {
+    currentInput = multiply(
+      parseFloat(firstOperand),
+      parseFloat(secondOperand)
+    );
+  } else if (currentOperator === "/") {
+    currentInput = divide(parseFloat(firstOperand), parseFloat(secondOperand));
+  }
+  currentOperator = "";
+  firstOperand = "";
+  awaitingNextNumber = true;
+  updateDisplay();
+}
 
 function clearDisplay() {
   currentInput = "";
