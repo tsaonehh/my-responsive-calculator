@@ -10,7 +10,7 @@
     <div class="calculator">
         <input type="text" id="display" readonly />
         <div class="buttons">
-            <button class="clear" onclick="clearDisplay('AC')">AC</button>
+        
             <button class="clear" onclick="clearDisplay()">DEL</button>
             <button class="operator" onclick="appendOperator('%')">%</button>
             <button class="operator" onclick="appendOperator('/')">/</button>
@@ -31,8 +31,6 @@
             <button class="operator" onclick="appendOperator('+')">+</button>
 
             <button class="number" onclick="appendNumber('0')">0</button>
-            <button class="number" onclick="appendNumber('00')">00</button>
-            <button class="number" onclick="appendOperator('.')">.</button>
             <button class="equals" onclick="calculate()">=</button>
         </div>
     </div>
